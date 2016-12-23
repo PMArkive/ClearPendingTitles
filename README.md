@@ -1,6 +1,6 @@
 #ClearPendingTitles
 
-3DS homebrew that uses am:u to clear the pending title installations for NAND and SD. Nothing special.
+.CIA/.3dsx app that uses am:u to clear pending title installations for NAND and SD. Nothing special.
 
 ## Compilation
 
