@@ -32,7 +32,8 @@ int main(int argc, char **argv) {
 					}
 					if (kDown & KEY_Y) {
 						printf("Clearing all pending title installs...\n");
-						AM_DeleteAllPendingTitles(MEDIATYPE_SD | MEDIATYPE_NAND);
+						AM_DeleteAllPendingTitles(MEDIATYPE_NAND);
+						AM_DeleteAllPendingTitles(MEDIATYPE_SD);
 						finished();
 					}
 					if (kDown & KEY_B) {
