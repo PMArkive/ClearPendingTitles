@@ -137,7 +137,7 @@ $(BUILD):
 #---------------------------------------------------------------------------------
 clean:
 	@echo clean ...
-	@rm -fr $(BUILD) $(TARGET).3dsx $(OUTPUT).smdh $(TARGET).elf $(TARGET).cia *.pem *.p12
+	@rm -fr $(BUILD) $(TARGET).3dsx $(OUTPUT).smdh $(TARGET).elf $(TARGET).cia res/banner.bnr res/icon.icn
 
 #---------------------------------------------------------------------------------
 res/banner.bnr: res/banner.png res/audio.wav
