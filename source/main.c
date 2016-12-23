@@ -12,7 +12,6 @@ int main(int argc, char **argv) {
     printf("ClearPendingTitles\nby Hikari\n\n");
     printf("Initializing AM...\n");
     amInit();
-    amAppInit();
 		printf("Press A to clear pending NAND title installs.\n");
 		printf("Press X to clear pending SD title installs.\n");
 		printf("Press Y to clear all pending title installs.\n");
@@ -40,7 +39,7 @@ int main(int argc, char **argv) {
 						printf("Exiting...\n");
 						break;
 					}
-					
+
 			}
 		amExit();
 		gfxFlushBuffers();
