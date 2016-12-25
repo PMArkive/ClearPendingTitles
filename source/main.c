@@ -16,7 +16,7 @@ int main(int argc, char **argv) {
 		printf("Press X to clear pending SD title installs.\n");
 		printf("Press Y to clear all pending title installs.\n");
 		printf("Press B to exit.\n");
-			while (aptMainLoop()){
+			while (aptMainLoop()) {
 				hidScanInput();
 				u32 kDown = hidKeysDown();
 
@@ -25,23 +25,23 @@ int main(int argc, char **argv) {
 						AM_DeleteAllPendingTitles(MEDIATYPE_NAND);
 						finished();
 					}
-					if (kDown & KEY_X) {
+					else if (kDown & KEY_X) {
 						printf("Clearing pending SD title installs...\n");
 						AM_DeleteAllPendingTitles(MEDIATYPE_SD);
 						finished();
 					}
-					if (kDown & KEY_Y) {
+				 	else if (kDown & KEY_Y) {
 						printf("Clearing all pending title installs...\n");
 						AM_DeleteAllPendingTitles(MEDIATYPE_NAND);
 						AM_DeleteAllPendingTitles(MEDIATYPE_SD);
 						finished();
 					}
-					if (kDown & KEY_B) {
+					else if (kDown & KEY_B) {
 						printf("Exiting...\n");
 						break;
 					}
-
 			}
+
 		amExit();
 		gfxFlushBuffers();
 		gfxSwapBuffers();
