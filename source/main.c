@@ -17,6 +17,7 @@ int main(int argc, char **argv) {
 		printf("Press Y to clear all pending title installs.\n");
 		printf("Press B to exit.\n");
 			while (aptMainLoop()) {
+				gspWaitForVBlank();
 				hidScanInput();
 				u32 kDown = hidKeysDown();
 				if (kDown & KEY_A) {
