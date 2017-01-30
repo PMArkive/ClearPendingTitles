@@ -6,6 +6,10 @@ void finished() {
 	printf("Done! Press B to exit.\n");
 }
 
+void gspWait(int vs) {
+	while(vs--)gspWaitForVBlank();
+}
+
 int main(int argc, char **argv) {
 	gfxInitDefault();
 	consoleInit(GFX_TOP, NULL);
@@ -33,7 +37,7 @@ int main(int argc, char **argv) {
 				else if (kDown & KEY_Y) {
 					printf("Clearing all pending title installs...\n");
 					AM_DeleteAllPendingTitles(MEDIATYPE_SD);
-					svcSleepThread(100);
+					gspWait(100);
 					AM_DeleteAllPendingTitles(MEDIATYPE_NAND);
 					finished();
 				}
