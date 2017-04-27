@@ -1,4 +1,4 @@
-#ClearPendingTitles
+# ClearPendingTitles
 
 .CIA/.3dsx app that uses am:sys to clear pending title installations for NAND and SD. Nothing special.
 
